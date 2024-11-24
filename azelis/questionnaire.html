@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Raw Material Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 20px;
+        }
+        .header, .footer {
+            text-align: center;
+            font-weight: bold;
+        }
+        .header img {
+            height: 50px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .questionnaire-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .questionnaire-table th, .questionnaire-table td {
+            border: 1px solid #000;
+            padding: 5px;
+            vertical-align: top;
+        }
+        .checkbox {
+            margin-right: 10px;
+        }
+        .signature-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.png" alt="Solina Logo">
+        <h1>Food Safety Raw Material Questionnaire</h1>
+        <p>Product denomination: PUR088 PST10 Mesquite Smoked Maltodextrin</p>
+        <p>Product code: 451521</p>
+        <p>Solina Product Code: ___________________</p>
+    </div>
+
+    <div class="section-title">Certificates & Warranty Available for the Product</div>
+
+    <table class="questionnaire-table">
+        <tr>
+            <th>Question</th>
+            <th>Yes</th>
+            <th>No</th>
+            <th>Notes</th>
+        </tr>
+        
+        <tr>
+            <td>Does the product contain <b>Beef Derivatives</b>? If yes, join the BSE Guarantee document.</td>
+            <td><input type="checkbox" class="checkbox" name="beef_derivatives_yes"></td>
+            <td><input type="checkbox" class="checkbox" name="beef_derivatives_no"></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>
+                Does the product contain <b>Flavouring</b>, declaration according to regulation (EC) 1334/2008?<br>
+                - If yes, is it possible to declare it as <b>Natural Flavouring</b>?<br>
+                - Does the product contain smoke flavouring?<br>
+                - If yes, please specify the unique code and the quantity of the primary products:
+                <ul>
+                    <li>Code: _______ Quantity: ______</li>
+                    <li>Code: _______ Quantity: ______</li>
+                </ul>
+            </td>
+            <td><input type="checkbox" class="checkbox" name="flavouring_yes"></td>
+            <td><input type="checkbox" class="checkbox" name="flavouring_no"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Does the product contain <b>Palm Derivatives</b>?</td>
+            <td><input type="checkbox" class="checkbox" name="palm_derivatives_yes"></td>
+            <td><input type="checkbox" class="checkbox" name="palm_derivatives_no"></td>
+            <td>If yes, join the certificate and specify RSPO status.</td>
+        </tr>
+
+        <tr>
+            <td>Does the product contain <b>Hydrolysed Protein</b>?<br>
+                - If yes, specify animal or vegetable.<br>
+                - If yes, what sort of hydrolysate? Acid or enzymatic?
+            </td>
+            <td><input type="checkbox" class="checkbox" name="hydrolysed_protein_yes"></td>
+            <td><input type="checkbox" class="checkbox" name="hydrolysed_protein_no"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Is the product suitable for <b>Vegetarians</b> (Diet for which only vegetable food products, dairy products, products containing eggs and honey are ingested)?</td>
+            <td><input type="checkbox" class="checkbox" name="vegetarians_yes"></td>
+            <td><input type="checkbox" class="checkbox" name="vegetarians_no"></td>
+            <td>If yes, fill in the V-Label document if requested (Annex 1).</td>
+        </tr>
+
+        <!-- Add more questions as necessary -->
+
+    </table>
+
+    <div class="signature-section">
+        <p>We, Azelis, certify the information above and promise not to change our formulations, supplies, productions, or control procedures that could alter the information above.</p>
+        <p>Date: <input type="text" name="date" placeholder="DD/MM/YYYY"></p>
+        <p>Signature and Stamp of the Company Representative:</p>
+        <p>Name and Position: Dominique De Witte - SHEQ Assistant</p>
+    </div>
+
+    <div class="footer">
+        <p>QSA-01-08 | Version 8, 2023-05-29 | Approved by: Quality Managers</p>
+    </div>
+
+</body>
+</html>

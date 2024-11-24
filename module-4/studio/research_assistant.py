@@ -6,15 +6,19 @@ from typing_extensions import TypedDict
 from langchain_community.document_loaders import WikipediaLoader
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, get_buffer_string
-from langchain_openai import ChatOpenAI
+from langchain_openai import AzureChatOpenAI
 
 from langgraph.constants import Send
 from langgraph.graph import END, MessagesState, START, StateGraph
+import os
 
 ### LLM
-
-llm = ChatOpenAI(model="gpt-4o", temperature=0) 
-
+llm = AzureChatOpenAI(
+    azure_deployment=os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"],
+    openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+    api_key=os.environ.get("AZURE_OPENAI_KEY"),
+    temperature=0
+)
 ### Schema 
 
 class Analyst(BaseModel):

@@ -1,10 +1,18 @@
 from langchain_core.messages import HumanMessage, SystemMessage, RemoveMessage
 from langgraph.graph import MessagesState
 from langgraph.graph import StateGraph, START, END
+from langchain_openai import AzureChatOpenAI
 
+import os
 # We will use this model for both the conversation and the summarization
 from langchain_openai import ChatOpenAI
-model = ChatOpenAI(model="gpt-4o", temperature=0) 
+### LLM
+model = AzureChatOpenAI(
+    azure_deployment=os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"],
+    openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+    api_key=os.environ.get("AZURE_OPENAI_KEY"),
+    temperature=0
+)
 
 # State class to store messages and summary
 class State(MessagesState):
