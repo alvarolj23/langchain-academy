@@ -8,4 +8,3 @@ langchain-openai
 notebook
 tavily-python
 wikipedia
-yfinance
